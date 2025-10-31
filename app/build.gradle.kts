@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("io.coil-kt:coil-compose:2.4.0")
     implementation("androidx.compose.material:material-icons-extended:<version>")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
     implementation(libs.androidx.core.ktx)

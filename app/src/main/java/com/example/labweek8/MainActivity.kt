@@ -11,21 +11,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.labweek8.ui.Soal1.View.WeatherScreen
+import com.example.labweek8.ui.Soal1.ViewModel.WeatherViewModel
 import com.example.labweek8.ui.theme.LabWeek8Theme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
-            LabWeek8Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            val viewModel = WeatherViewModel()
+            WeatherScreen(viewModel)
         }
     }
 }
